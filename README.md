@@ -1,6 +1,7 @@
 # Road map
 
 * get familiar with web (html/css/javascript)
+* get familiar with markdown to write notes
 * get familiar with canvas
 * get familiar with 2D game
 * get familiar with class
