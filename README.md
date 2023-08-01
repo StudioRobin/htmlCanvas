@@ -28,4 +28,8 @@
 
 <https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html>
 
+### Useful JavaScript libraries
+
+<https://createjs.com/>
+
 ## Animation
