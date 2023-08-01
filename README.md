@@ -28,6 +28,8 @@
 
 <https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html>
 
+<https://www.w3schools.com/jsref/api_canvas.asp>
+
 ### Useful JavaScript libraries
 
 <https://createjs.com/>
