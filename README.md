@@ -6,13 +6,19 @@
 * get familiar with 2D game
 * get familiar with class
   * template for instantiating instances
-  * modeling properties, methods, behaviors
+    * constructors
+  * modeling properties
+    * getter & setter
+  * methods
+  * events
 
 ## JavaScript References
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+
+[Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
 ## Canvas References
 
