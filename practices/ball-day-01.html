@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ball day 01</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="400"
+      height="400"
+      style="border: 1px dashed black"
+    >
+    </canvas>
+
+    <br />
+    <label for="positionX">x:</label> <input type="number" id="positionX" />
+    <label for="positionY">y:</label> <input type="number" id="positionY" />
+    <br />
+    <label for="radius">radius:</label> <input type="number" id="radius" />
+    <label for="color">color:</label> <input type="color" id="color" />
+    <br />
+    <button type="button" onclick="createBall()">Create Ball</button>
+    <button type="button" onclick="clearCanvas()">clear</button>
+    <script>
+      let canvas = document.getElementById("canvas");
+      let context = canvas.getContext("2d");
+
+      function drawBall(x, y, r, color) {
+        // context.arc(x, y, r, startAngle, endAngle) method to draw a ball
+        // x and y are the position
+        // r is the radius
+        // startAngle and endAngle are between 0 and 2pi. i.e., arc(x, y, r, 0, Math.PI*2)
+        context.beginPath();
+        context.arc(x, y, r, 0, Math.PI * 2);
+        context.fillStyle = color;
+        context.fill();
+        context.closePath();
+      }
+
+      function clearCanvas(){
+        context.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      function createBall() {
+        let x = document.getElementById("positionX").value || 100;
+        let y = document.getElementById("positionY").value || 100;
+        let r = document.getElementById("radius").value || 30;
+        let color = document.getElementById("color").value || "red";
+        drawBall(x, y, r, color);
+      }
+
+      drawBall(40, 50, 30, "red");
+    </script>
+  </body>
+</html>
