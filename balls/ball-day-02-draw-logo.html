@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ball-day-02</title>
+    <style>
+      #canvas {
+        border: 1px solid #222;
+        background-color: #000;
+        -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 1);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="640" height="480"> </canvas>
+
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      const { width: w, height: h } = canvas;
+
+      function draw(timestamp) {
+
+
+        ctx.clearRect(0, 0, w, h); // clear canvas
+        ctx.save();
+        // Starfield!
+        ctx.fillStyle = "#444";
+        let x, y, radius;
+        for (let i = 0; i < 550; i++) {
+          x = Math.random() * w;
+          y = Math.random() * h;
+          radius = Math.random() * 3;
+
+          ctx.beginPath();
+          ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+          ctx.fill();
+        }
+
+        ctx.translate(175, 150);
+
+        // Draw the words as a mask
+        ctx.font = "bold 65pt monospace";
+        ctx.fillStyle = "black";
+        ctx.fillText("Robin", 10, 62);
+        ctx.fillText("Studio", 10, 120);
+
+        // Draw lines over the mask
+        ctx.globalCompositeOperation = "source-atop";
+
+        // Rainbow!
+        for (let i = 0; i < 6; i++) {
+          ctx.fillStyle = `hsl(${i * (250 / 6)}, 90%, 55%)`;
+          ctx.fillRect(0, i * 20, 300, 20);
+        }
+
+        // Draw the shadow behind the logo
+        ctx.fillStyle = "#999";
+        ctx.globalCompositeOperation = "destination-over";
+        ctx.fillText("Robin", 13, 64);
+        ctx.fillText("Studio", 13, 122);
+        ctx.font = "30pt monospace";
+
+        // Back to default
+        ctx.globalCompositeOperation = "source-over";
+
+        // Add characters (so they are evenly spaced)
+        "games".split("").forEach((ch, i) => {
+          ctx.fillText(ch, i * 37 + 15, 145);
+        });
+        ctx.restore();
+        window.requestAnimationFrame(draw);
+      }
+
+      window.requestAnimationFrame(draw);
+    </script>
+  </body>
+</html>
