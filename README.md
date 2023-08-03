@@ -22,6 +22,8 @@
 
 ## Canvas References
 
+ Introduced by Apple in 2005 for the dynamic creation and display of graphics and images, canvas was standardized in HTML5 and is now supported on most modern web browsers.
+
 <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas>
 
 <https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API>

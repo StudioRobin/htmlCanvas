@@ -24,8 +24,8 @@
     <button type="button" onclick="createBall()">Create Ball</button>
     <button type="button" onclick="clearCanvas()">clear</button>
     <script>
-      let canvas = document.getElementById("canvas");
-      let context = canvas.getContext("2d");
+      const canvas = document.getElementById("canvas");
+      const context = canvas.getContext("2d");
 
       function drawBall(x, y, r, color) {
         // context.arc(x, y, r, startAngle, endAngle) method to draw a ball
