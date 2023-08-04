@@ -53,10 +53,13 @@
         if (p2 > w) p2 -= w + 50;
 
         ctx.fillStyle = "#f00";
-        ctx.fillRect(p1, 120, 50, 50);
-        ctx.fillRect(p2, 190, 50, 50);
+        ctx.beginPath();
+        ctx.arc(p1, 120, 25, 0, Math.PI * 2);
+        ctx.arc(p2, 190, 25, 0, Math.PI * 2);
+        ctx.fill();
+        context.closePath();
       }
-      
+
       requestAnimationFrame(loop);
     </script>
   </body>
