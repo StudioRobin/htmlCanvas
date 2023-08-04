@@ -39,3 +39,13 @@
 <https://createjs.com/>
 
 ## Animation
+
+## Community
+
+<https://opengameart.org/>
+
+<https://kenney.nl/assets>
+
+### Experts
+
+<https://outer-court.com/>
