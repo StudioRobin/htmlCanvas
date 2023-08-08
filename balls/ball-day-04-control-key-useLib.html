@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day-05</title>
+    <script src="lib/KeyControls.js"></script>
+    <style>
+      body {
+        margin: 30px auto;
+        text-align: center;
+        background-color: #161414;
+        color: #999;
+      }
+
+      #board canvas {
+        border: 1px solid #333;
+        background-color: #000;
+        -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 1);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="board">
+      <canvas width="640" height="480"></canvas>
+    </div>
+    <script>
+      const canvas = document.querySelector("#board canvas");
+      const ctx = canvas.getContext("2d");
+      const { width: w, height: h } = canvas;
+      const controls = new KeyControls();
+
+      function drawBall(context, x, y, r, color) {
+        // context.arc(x, y, r, startAngle, endAngle) method to draw a ball
+        // x and y are the position
+        // r is the radius
+        // startAngle and endAngle are between 0 and 2pi. i.e., arc(x, y, r, 0, Math.PI*2)
+        context.beginPath();
+        context.arc(x, y, r, 0, Math.PI * 2);
+        context.font = "12px Comic Sans MS";
+        context.fillText(`${x}, ${y}`, x+r, y+r);
+        context.fillStyle = color;
+        context.fill();
+        context.closePath();
+      }
+
+      // Game setup code
+      let x = w / 2;
+      let y = h / 2;
+      const r = 25;
+      let color = 0;
+
+      function loopy() {
+        requestAnimationFrame(loopy);
+
+        ctx.clearRect(0, 0, w, h);
+        // Game logic code
+        x += controls.x * 3;
+        y += controls.y * 3;
+
+        if (x<100) x=100;
+        if (x>400) x=400;
+        if (y<100) y=100;
+        if (y>400) y=400;
+        
+        if (controls.action) {
+          color += 10;
+          if (color > 360) {
+            color -= 360;
+          }
+        }
+
+        drawBall(ctx, x, y, r, `hsl(${color}, 50%, 50%)`);
+      }
+      requestAnimationFrame(loopy);
+    </script>
+  </body>
+</html>
