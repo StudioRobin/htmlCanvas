@@ -20,6 +20,8 @@
 
 [Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
+[Game Dev](https://developer.mozilla.org/en-US/docs/Games)
+
 ## Canvas References
 
  Introduced by Apple in 2005 for the dynamic creation and display of graphics and images, canvas was standardized in HTML5 and is now supported on most modern web browsers.
@@ -37,3 +39,13 @@
 <https://createjs.com/>
 
 ## Animation
+
+## Community
+
+<https://opengameart.org/>
+
+<https://kenney.nl/assets>
+
+### Experts
+
+<https://outer-court.com/>
