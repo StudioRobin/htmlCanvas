@@ -49,3 +49,11 @@
 ### Experts
 
 <https://outer-court.com/>
+
+### Books
+
+[HTML5 Games: Novice to Ninja](https://github.com/spbooks/html5games1)
+
+[Advanced Game Design with HTML5 and JavaScript - 2015](https://github.com/kittykatattack/agd)
+
+[Introducing JavaScript Game Development](https://github.com/Apress/intro-javascript-game-dev)

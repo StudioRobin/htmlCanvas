@@ -28,16 +28,19 @@
       ctx.font = "16pt monospace";
 
       const speed = 64;
-      let p1 = 0;
-      let p2 = 0;
+      let p1X = 0;
+      let p2X = 0;
 
       let dt = 0;
       let last = 0;
+
+      // timestamp is (current time - start time)
+      // loop is executed every frame
       function loop(timestamp) {
         requestAnimationFrame(loop);
 
         const t = timestamp / 1000; // Let's work in seconds
-        dt = t - last;
+        dt = t - last; // each frame duration
         last = t;
 
         // Game logic code
@@ -45,19 +48,19 @@
         ctx.fillRect(0, 0, w, h);
         ctx.strokeText(`Frame length: ${(dt * 1000).toFixed(2)} ms`, 70, 20);
         ctx.strokeText(`FPS: ${(1000 / dt / 1000).toFixed(2)}`, 70, 50);
-        ctx.strokeText(`Total time: ${t.toFixed(2)}`, 70, 80);
+        ctx.strokeText(`Timestamp: ${timestamp}`, 70, 80);
 
-        p1 += speed * dt;
-        p2 += speed * (1 / 60);
-        if (p1 > w) p1 -= w + 50;
-        if (p2 > w) p2 -= w + 50;
+        // dt is close to 1/60 second
+        p1X += speed * dt;
+        p2X += speed * (1 / 60); // the old school fixed update
+        if (p1X > w) p1X -= w + 50;
+        if (p2X > w) p2X -= w + 50;
 
         ctx.fillStyle = "#f00";
         ctx.beginPath();
-        ctx.arc(p1, 120, 25, 0, Math.PI * 2);
-        ctx.arc(p2, 190, 25, 0, Math.PI * 2);
+        ctx.arc(p1X, 120, 25, 0, Math.PI * 2);
+        ctx.arc(p2X, 190, 25, 0, Math.PI * 2);
         ctx.fill();
-        context.closePath();
       }
 
       requestAnimationFrame(loop);
