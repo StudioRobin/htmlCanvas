@@ -43,3 +43,4 @@ class MouseControls {
     }
   }
   
+  export default MouseControls;

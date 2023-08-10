@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>day-04 mouse</title>
-    <script src="lib/MouseControls.js"></script>
+    <title>day-04 mouse</title>    
     <style>
       body {
         margin: 30px auto;
@@ -27,7 +26,8 @@
     <div id="board">
       <canvas width="640" height="480"></canvas>
     </div>
-    <script>
+    <script type="module">
+      import MouseControls from "./lib/MouseControls.js";
       const canvas = document.querySelector("#board canvas");
       const ctx = canvas.getContext("2d");
       const { width: w, height: h } = canvas;

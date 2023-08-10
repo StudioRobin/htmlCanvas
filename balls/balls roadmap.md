@@ -4,6 +4,9 @@ To learn everything of 2D game programming from scratch.
 
 ## Canvas and drawing
 
+to learn:
+*
+
 ### Graphics
 
 ### TileMap

@@ -22,6 +22,13 @@ if (a < b) {
 
 [Array on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
+get a random item from an array:
+
+```js
+let dice = ["one","two","three","four","five","six"];
+let roll = dice[Math.floor(Math.random() * dice.length)];
+```
+
 ## Object
 
 Objects are created from class. They exist in the run-time. Classes exist in design time and compile time.
