@@ -24,7 +24,7 @@
   </head>
   <body>
     <div id="board">
-      <canvas width="640" height="480"></canvas>
+      <canvas width="800" height="600"></canvas>
     </div>
     <script type="module">
       import MouseControls from "./lib/MouseControls.js";
@@ -44,7 +44,6 @@
         context.fillText(`${x}, ${y}`, x + r, y + r);
         context.fillStyle = color;
         context.fill();
-        context.closePath();
       }
 
       // Game setup code

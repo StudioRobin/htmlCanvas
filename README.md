@@ -56,4 +56,4 @@
 
 [Advanced Game Design with HTML5 and JavaScript - 2015](https://github.com/kittykatattack/agd)
 
-[Introducing JavaScript Game Development](https://github.com/Apress/intro-javascript-game-dev)
+[Introducing JavaScript Game Development - 2017](https://github.com/Apress/intro-javascript-game-dev)
