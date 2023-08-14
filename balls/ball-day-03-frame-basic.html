@@ -50,7 +50,8 @@
         ctx.strokeText(`FPS: ${(1000 / dt / 1000).toFixed(2)}`, 70, 50);
         ctx.strokeText(`Timestamp: ${timestamp}`, 70, 80);
 
-        // dt is close to 1/60 second
+        // dt is close to 1/60 second, 16.6667 millisecond
+        // all the movements (velocity, rotate, transform) revolve around the dt
         p1X += speed * dt;
         p2X += speed * (1 / 60); // the old school fixed update
         if (p1X > w) p1X -= w + 50;
