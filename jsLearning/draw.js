@@ -8,9 +8,9 @@ let drawBall = function (context, x, y, r) {
   context.arc(x, y, r, 0, 2 * Math.PI);
   context.stroke();
 };
-let size = 20;
-let maxSize = 50
+let size = 10;
+let maxSize = 50;
 drawBall(context, 200, 200, size);
 for(var i = 0; i<maxSize; i++){
-   
-}
+    size++;
+};
