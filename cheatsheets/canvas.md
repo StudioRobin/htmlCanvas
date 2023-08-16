@@ -26,6 +26,11 @@ document.body.appendChild(canvas);
 let context = canvas.getContext("2d");
 ```
 
+
+## Path
+
+<https://dirask.com/posts/JavaScript-draw-arrow-on-canvas-element-DZ3emp>
+
 ## Radians
 
 Anything that involves angles is usually expressed in radians rather than degrees.
@@ -36,3 +41,7 @@ A circle has 360 degrees or 2π radians. Radians is just another unit of measure
 const deg2Rad = deg => (Math.PI / 180) * deg;
 const rad2Deg = rad => (180 / Math.PI) * rad;
 ```
+
+## References
+
+[Canvas API MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)

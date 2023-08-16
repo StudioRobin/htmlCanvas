@@ -32,7 +32,11 @@
 
 <https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html>
 
+<https://www.w3schools.com/graphics/canvas_intro.asp>
+
 <https://www.w3schools.com/jsref/api_canvas.asp>
+
+<https://www.w3schools.com/tags/ref_canvas.asp>
 
 ### Useful JavaScript libraries
 
